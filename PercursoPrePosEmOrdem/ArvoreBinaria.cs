@@ -13,10 +13,6 @@ namespace PercursoPrePosEmOrdem
             this.NoArvore = no; 
         }
 
-        /**
-         * 
-         * @param raiz raiz da árvore
-         */
         public ArvoreBinaria(string raiz)
         {
             setArvore(new No(raiz));
@@ -98,14 +94,16 @@ namespace PercursoPrePosEmOrdem
         public string LerArvoreEmPreOrdem()
         {
             if (NoArvore == null) { 
-                return ""; 
+                return string.Empty; 
             }
             return LerArvoreEmPreOrdem(NoArvore);
         }
 
         private string LerArvoreEmPreOrdem(No no)
         {
-            if (no == null) { return ""; }
+            if (no == null) { 
+                return string.Empty; 
+            }
             string ContruirStringApresentacao = no.ToString();
             if (no.NoEsquerdo != null)
             {
@@ -120,8 +118,8 @@ namespace PercursoPrePosEmOrdem
 
         public string LerArvoreEmInOrdem()
         {
-            if (NoArvore == null) { 
-                return ""; 
+            if (NoArvore == null) {
+                return string.Empty;
             }
             return LerArvoreEmInOrdem(NoArvore);
         }
@@ -129,8 +127,8 @@ namespace PercursoPrePosEmOrdem
         private string LerArvoreEmInOrdem(No no)
         {
             if (no == null) 
-            { 
-                return ""; 
+            {
+                return string.Empty;
             }
             string ContruirStringApresentacao = "";
             if (no.NoEsquerdo != null)
@@ -147,16 +145,16 @@ namespace PercursoPrePosEmOrdem
 
         public string LerArvoreEmPosOrdem()
         {
-            if (NoArvore == null) { 
-                return ""; 
+            if (NoArvore == null) {
+                return string.Empty;
             }
             return LerArvoreEmPosOrdem(NoArvore);
         }
 
         private string LerArvoreEmPosOrdem(No no)
         {
-            if (no == null) { 
-                return ""; 
+            if (no == null) {
+                return string.Empty;
             }
             string ContruirStringApresentacao = "";
             if (no.NoEsquerdo != null)
