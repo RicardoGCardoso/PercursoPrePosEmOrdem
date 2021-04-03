@@ -25,7 +25,7 @@ namespace PercursoPrePosEmOrdem
         // INFORMA O NO PAI
         // INFORMA O NOME DO NÓ
         // INFORMA A POSIÇÃO AO QUAL ELE DEVE ENTRAR SE É ESQUERDA OU DIREITA
-        public void AdicionarNo(InsercaoEnum modo, string noPai, string nomeNo)
+        public void AdicionarPorPercurso(InsercaoEnum modo, string noPai, string nomeNo)
         {
             if (modo == InsercaoEnum.DIREITA)
             {
@@ -77,20 +77,12 @@ namespace PercursoPrePosEmOrdem
             return EncontrarNoArvore(no.NoDireira, nome);
         }
 
-        /**
-         * limpa a árvore
-         * @param raiz raiz da árvore
-         */
         public void LimparArvore(string raiz)
         {
             RecursivaLimpaNos(NoArvore);
             setArvore(new No(raiz));
         }
 
-        /**
-         * método recursivo auxiliar para limpar a árvore
-         * @param no
-         */
         private void RecursivaLimpaNos(No no)
         {
             if (no == null) { 
@@ -103,10 +95,6 @@ namespace PercursoPrePosEmOrdem
             no = null;
         }
 
-        /**
-         * RED
-         * @return
-         */
         public string LerArvoreEmPreOrdem()
         {
             if (NoArvore == null) { 
