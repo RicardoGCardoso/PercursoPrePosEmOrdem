@@ -31,7 +31,7 @@ namespace PercursoPrePosEmOrdem
             ArvoreBinaria arvore = new ArvoreBinaria("X");
 
             // INFORME A POSICAO RELATIVA DO FILHO EM RELAÇÃO AO PAI
-            // AdicionarNo(POSICAO, NO PAI, NO FILHO);
+            // AdicionarPorPercurso(POSICAO, NO PAI, NO FILHO);
             arvore.AdicionarPorPercurso(InsercaoEnum.ESQUERDA, "X", "B");
             arvore.AdicionarPorPercurso(InsercaoEnum.ESQUERDA, "B", "D");
             arvore.AdicionarPorPercurso(InsercaoEnum.DIREITA, "X", "C");
@@ -41,8 +41,11 @@ namespace PercursoPrePosEmOrdem
             arvore.AdicionarPorPercurso(InsercaoEnum.ESQUERDA, "T", "H");
             arvore.AdicionarPorPercurso(InsercaoEnum.DIREITA, "T", "I");
 
+            // MOSTRA O NO DA SUBARVORE ESQUERDA, VISITA A RAIZ DA SUBARVORE E NO DA SUBARVORE DIREITA
             Console.WriteLine("MOSTRAR EM INORDEM " + arvore.LerArvoreEmInOrdem());
+            // POS ORDEM MOSTRA NO A ESQUERDA , NO A DIREITA E A RAIZ DA SUBARVORE
             Console.WriteLine("MOSTAR EM POS ORDEM " + arvore.LerArvoreEmPosOrdem());
+            // MOSTRA OS NOS DA RAIZ ATÉ OS NOS DAS SUBARVORES A ESQUERDA, DEPOIS OS NOS DA SUBS ARVORES A DIRETIRA
             Console.WriteLine("MOSTRAR EM PREORDEM " + arvore.LerArvoreEmPreOrdem());
             Console.WriteLine("\n\n\n\n");
 
